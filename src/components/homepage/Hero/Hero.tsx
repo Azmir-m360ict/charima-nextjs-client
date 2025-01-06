@@ -13,7 +13,7 @@ const Hero = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
-  const slides = ['/slider/slider_2.jpg'];
+  const slides = ['/slider/slider_2.png'];
 
   const onSelect = useCallback(() => {
     if (!api) return;
