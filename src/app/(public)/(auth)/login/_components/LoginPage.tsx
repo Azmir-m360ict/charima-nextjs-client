@@ -120,7 +120,7 @@ export default function LoginPage({ session }: Props) {
           </Link>
         </div>
 
-        <div className='relative'>
+        {/* <div className='relative'>
           <div className='absolute inset-0 flex items-center'>
             <span className='w-full border-t' />
           </div>
@@ -129,9 +129,9 @@ export default function LoginPage({ session }: Props) {
               Or continue with
             </span>
           </div>
-        </div>
+        </div> */}
 
-        <div className='flex space-x-4'>
+        {/* <div className='flex space-x-4'>
           <Button
             onClick={() => SocialLogin('google', redirect_to)}
             variant='outline'
@@ -140,7 +140,7 @@ export default function LoginPage({ session }: Props) {
             <FaGoogle className='mr-2 h-4 w-4' />
             Google
           </Button>
-        </div>
+        </div> */}
         <div className='text-center text-sm'>
           Don't have any account?{' '}
           <Link href='signup' className='text-blue-600 hover:underline'>

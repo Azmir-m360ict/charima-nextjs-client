@@ -107,7 +107,7 @@ export default function SignupPage() {
           </form>
         </Form>
 
-        <div className='relative'>
+        {/* <div className='relative'>
           <div className='absolute inset-0 flex items-center'>
             <span className='w-full border-t' />
           </div>
@@ -116,14 +116,14 @@ export default function SignupPage() {
               Or continue with
             </span>
           </div>
-        </div>
+        </div> */}
 
-        <div className='flex space-x-4'>
+        {/* <div className='flex space-x-4'>
           <Button variant='outline' className='w-full'>
             <FaGoogle className='mr-2 h-4 w-4' />
             Google
           </Button>
-        </div>
+        </div> */}
         <div className='text-center text-sm'>
           Already have account?{' '}
           <Link href='login' className='text-blue-600 hover:underline'>
