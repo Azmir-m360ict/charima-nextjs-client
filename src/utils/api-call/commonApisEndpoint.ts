@@ -112,6 +112,14 @@ export const commonApis = baseApi.injectEndpoints({
         body,
       }),
     }),
+
+    newLetter: builder.mutation<HTTPResponse<void>, { email: string }>({
+      query: (body) => ({
+        url: `/common/news-letter`,
+        method: 'POST',
+        body,
+      }),
+    }),
   }),
 });
 
@@ -126,4 +134,5 @@ export const {
   useSendOtpMutation,
   useMatchOtpMutation,
   useChangeForgotPasswordMutation,
+  useNewLetterMutation,
 } = commonApis;

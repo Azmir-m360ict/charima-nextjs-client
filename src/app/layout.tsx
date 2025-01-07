@@ -29,16 +29,16 @@ export default async function RootLayout({
   return (
     <html lang='en'>
       <body className={satoshi.className}>
-        <HolyLoader color={site_config.primary_color} />
-        {/* <TopBanner /> */}
         <Providers>
+          <HolyLoader color={site_config.primary_color} />
+          {/* <TopBanner /> */}
           <SessionProvider basePath={'/'} session={session}>
             <TopNavbar />
             <div className='min-h-screen'>{children}</div>
             <Toaster />
           </SessionProvider>
+          <Footer />
         </Providers>
-        <Footer />
       </body>
     </html>
   );

@@ -10,6 +10,7 @@ export const PUBLIC_ROUTES = [
   '/products',
   '/shop',
   '/cart',
+  '/categories',
   '/checkout',
   '/api/auth/callback/google',
   '/api/auth/callback/github',
