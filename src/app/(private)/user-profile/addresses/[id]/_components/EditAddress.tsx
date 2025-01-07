@@ -147,7 +147,7 @@ const EditAddress = ({ id }: Props) => {
         title: 'Success',
         description: 'Address has been updated',
       });
-      router.push('/addresses');
+      router.push('/user-profile/addresses');
     }
   }, [isSuccess]);
   return (

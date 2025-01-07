@@ -112,7 +112,7 @@ const AddNewAddress = ({ redirectURL }: Props) => {
       });
       form.reset();
 
-      if (redirectURL) router.push('/addresses');
+      if (redirectURL) router.push('/user-profile/addresses');
     }
   }, [isSuccess, redirectURL]);
 

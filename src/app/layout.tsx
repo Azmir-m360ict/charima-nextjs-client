@@ -1,7 +1,7 @@
 import { auth } from '@/auth';
 import Footer from '@/components/layout/Footer';
 import TopNavbar from '@/components/layout/Navbar/TopNavbar';
-import { Toaster } from '@/components/ui/toaster';
+import { Toaster as ThemeToaster, Toaster } from '@/components/ui/toaster';
 import { site_config } from '@/lib/site_config';
 import { satoshi } from '@/styles/fonts';
 import '@/styles/globals.css';
@@ -36,6 +36,7 @@ export default async function RootLayout({
             <TopNavbar />
             <div className='min-h-screen'>{children}</div>
             <Toaster />
+            <ThemeToaster />
           </SessionProvider>
           <Footer />
         </Providers>
