@@ -30,7 +30,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const sideMenu = [
-    { name: 'Account Setting', icon: CircleUser, href: 'my-account' },
+    {
+      name: 'Account Setting',
+      icon: CircleUser,
+      href: 'user-profile/my-account',
+    },
     { name: 'Order', icon: ShoppingCart, href: 'orders' },
     { name: 'Reviews', icon: Star, href: 'reviews' },
     { name: 'Question & Answer', icon: CircleHelp, href: 'question' },

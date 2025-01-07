@@ -12,6 +12,12 @@ export const PUBLIC_ROUTES = [
   '/cart',
   '/categories',
   '/checkout',
+  '/about-us',
+  '/contact-us',
+  '/privacy-policy',
+  '/return-policy',
+  '/terms-conditions',
+  '/track-order',
   '/api/auth/callback/google',
   '/api/auth/callback/github',
 ];
