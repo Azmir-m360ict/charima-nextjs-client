@@ -4,7 +4,7 @@ export const site_config = {
   site_name: 'Charima',
   site_logo: '/charima.png',
   primary_color: '#20bdc8',
-  seo_site_name: 'Charima Home Decor - Luxury for All',
+  seo_site_name: 'Charima E-commerce',
   token_name: 'Charima_TOKEN',
   currency: '৳',
   maxPrice: 100000,
