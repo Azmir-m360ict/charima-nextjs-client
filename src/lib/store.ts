@@ -4,9 +4,10 @@ import { persistReducer, persistStore } from 'redux-persist';
 import cartsReducer from './features/carts/cartsSlice';
 import { baseApi } from './features/RTK/BaseApi';
 import variationReducer from './features/variation/variationSlice';
+import { site_config } from './site_config';
 
 const persistConfig = {
-  key: 'root',
+  key: site_config.token_name + '_root',
   storage,
   version: 1,
   whitelist: ['carts'],
