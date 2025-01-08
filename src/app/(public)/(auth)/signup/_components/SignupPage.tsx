@@ -3,7 +3,6 @@
 import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
 import { FormFieldInput } from '@/components/ui/FormItem';
-import { toast } from '@/hooks/use-toast';
 import { site_config } from '@/lib/site_config';
 import { cn } from '@/lib/utils';
 import { integralCF } from '@/styles/fonts';
@@ -13,7 +12,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { FaGoogle } from 'react-icons/fa';
+import { toast } from 'sonner';
 import * as z from 'zod';
 
 const formSchema = z.object({
@@ -47,10 +46,7 @@ export default function SignupPage() {
 
   useEffect(() => {
     if (isSuccess) {
-      toast({
-        title: 'success',
-        description: 'Your account has been created successfully',
-      });
+      toast.success('Your account has been created successfully');
       router.push('/login');
     }
   }, [isSuccess]);

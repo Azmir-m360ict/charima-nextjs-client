@@ -6,16 +6,11 @@ import {
   fetchBaseQuery,
   FetchBaseQueryError,
 } from '@reduxjs/toolkit/query/react';
-import {
-  getCookie,
-  getCookies,
-  setCookie,
-  deleteCookie,
-  hasCookie,
-} from 'cookies-next/client';
+import { getCookie } from 'cookies-next/client';
 
-import { TagTypes } from './tagTypes';
 import { site_config } from '@/lib/site_config';
+import { toast } from 'sonner';
+import { TagTypes } from './tagTypes';
 
 interface EnhancedFetchArgs extends FetchArgs {
   token?: string;
@@ -45,6 +40,20 @@ export const baseApi = createApi({
   reducerPath: 'baseApi',
   baseQuery: async (args: string | EnhancedFetchArgs, api, extraOptions) => {
     const response = await baseQuery(args, api, extraOptions);
+
+    if ('error' in response) {
+      if (response.error && 'data' in response.error) {
+        const errorData = response.error.data as {
+          success: boolean;
+          message: string;
+          type: string;
+          status: number;
+        };
+
+        toast.error(errorData?.message, { position: 'top-right' });
+      }
+    }
+
     return response;
   },
   keepUnusedDataFor: 24 * 60,
